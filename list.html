@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+25/02/2025 09:09:38 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/67bd87fa90c3f6515a091ddf.67bd87fb90c3f6515a091de2.5PMYKyk.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --fuchsia-blue: #7c4eff;
+  --ioslightbackground: #d2d3d8;
+  --ioslighton-primary: #000000;
+  --ioslightprimary: #ffffff;
+  --ioslightsecondary: #abb0bc;
+  --medium-purple: #8d68ff;
+  --medium-purple-2: #8c68ff;
+  --pale-rose: #ffe3ee;
+  --purple-heart: #693ce4;
+  --purple-heart-2: #683be4;
+  --purple-heart-3: #5411d7;
+  --purple-heart-4: #5511d8;
+  --santas-gray: #9ea2ac;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 18px;
+  --font-size-s: 17px;
+  --font-size-xl: 22px;
+  --font-size-xs: 16px;
+  --font-size-xxl: 24px;
+ 
+  --font-family-apple_sd_gothic_neo-regular: "Apple SD Gothic Neo-Regular", Helvetica;
+  --font-family-hs산토끼체_2_0-regular: "HS산토끼체 2.0-Regular", Helvetica;
+  --font-family-pretendard-bold: "Pretendard-Bold", Helvetica;
+  --font-family-pretendard-medium: "Pretendard-Medium", Helvetica;
+  --font-family-pretendard-regular: "Pretendard-Regular", Helvetica;
+  --font-family-pretendard-semibold: "Pretendard-SemiBold", Helvetica;
+}
+.applesdgothicneo-regular-normal-black-22px {
+  color: var(--ioslighton-primary);
+  font-family: var(--font-family-apple_sd_gothic_neo-regular);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.pretendard-semi-bold-white-18px {
+  color: var(--ioslightprimary);
+  font-family: var(--font-family-pretendard-semibold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.hs2-0-regular-normal-white-20px {
+  color: var(--ioslightprimary);
+  font-family: var(--font-family-hs산토끼체_2_0-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.pretendard-bold-white-24px {
+  color: var(--ioslightprimary);
+  font-family: var(--font-family-pretendard-bold);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.pretendard-bold-white-20px {
+  color: var(--ioslightprimary);
+  font-family: var(--font-family-pretendard-bold);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.pretendard-medium-white-16px {
+  color: var(--ioslightprimary);
+  font-family: var(--font-family-pretendard-medium);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.pretendard-medium-white-18px {
+  color: var(--ioslightprimary);
+  font-family: var(--font-family-pretendard-medium);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.pretendard-regular-normal-white-17px {
+  color: var(--ioslightprimary);
+  font-family: var(--font-family-pretendard-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+.ellipse-139 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 57px;
+  height: 114px;
+  left: 85px;
+  position: absolute;
+  top: 0px;
+  width: 114px;
+}
+
+.ellipse-141 {
+  background-color: transparent;
+  height: 134px;
+  left: 50px;
+  position: absolute;
+  top: 80px;
+  width: 134px;
+}
+
+.ellipse-142 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 37.5px;
+  height: 75px;
+  left: 0px;
+  position: absolute;
+  top: 77px;
+  width: 75px;
+}
+
+.ellipse-143 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 54.5px;
+  height: 109px;
+  left: 20px;
+  position: absolute;
+  top: 121px;
+  width: 109px;
+}
+
+.ellipse-144 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 54px;
+  height: 108px;
+  left: 166px;
+  position: absolute;
+  top: 57px;
+  width: 108px;
+}
+
+.ellipse-145 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 38.5px;
+  height: 77px;
+  left: 259px;
+  position: absolute;
+  top: 57px;
+  width: 77px;
+}
+
+.ellipse-146 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 71px;
+  height: 142px;
+  left: 286px;
+  position: absolute;
+  top: 80px;
+  width: 142px;
+}
+
+.rectangle-124 {
+  background-color: var(--fuchsia-blue);
+  height: 230px;
+  left: 7px;
+  position: absolute;
+  top: 99px;
+  width: 384px;
+}
+
+.union {
+  background-color: transparent;
+  position: absolute;
+}
+
+.i-os-key-default {
+  align-items: center;
+  background-color: var(--ioslightprimary);
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px #0000004c;
+  display: flex;
+  flex-direction: column;
+  height: 42px;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+}
+
+.i-os-key-function {
+  align-items: center;
+  background-color: var(--ioslightsecondary);
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px #0000004c;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 42px;
+  justify-content: center;
+  padding: 8px 6px;
+}
+
+.text {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+/* 별 스타일 */
+.star {
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+}
+
+/* 별 크기 */
+.star-large {
+  width: 140px;
+  height: 140px;
+}
+
+.star-medium {
+  width: 105px;
+  height: 105px;
+}
+
+.star-small {
+  width: 70px;
+  height: 70px;
+}
+
+.star-xsmall {
+  width: 35px;
+  height: 35px;
+}
+
+/* screen - u4359u4457u4352u4458u4523u4370u4449u4535-1 */
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 {
+  background-color: var(--purple-heart);
+  cursor: pointer;
+  height: 1261px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 375px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .group-19-YplmAR {
+  background-color: transparent;
+  height: 712px;
+  left: -226px;
+  position: absolute;
+  top: 115px;
+  width: 808px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-139-2vBsE1 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 107.59px;
+  height: 215px;
+  left: 160px;
+  position: absolute;
+  top: 0px;
+  width: 215px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-141-2vBsE1 {
+  background-color: transparent;
+  height: 253px;
+  left: 226px;
+  position: absolute;
+  top: 151px;
+  width: 121px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-144-2vBsE1 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 101.93px;
+  height: 204px;
+  left: 313px;
+  position: absolute;
+  top: 108px;
+  width: 204px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-145-2vBsE1 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 72.67px;
+  height: 145px;
+  left: 489px;
+  position: absolute;
+  top: 108px;
+  width: 145px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-146-2vBsE1 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 134.02px;
+  height: 268px;
+  left: 540px;
+  position: absolute;
+  top: 151px;
+  width: 268px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-142-2vBsE1 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 70.78px;
+  height: 142px;
+  left: 0px;
+  position: absolute;
+  top: 145px;
+  width: 142px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-143-2vBsE1 {
+  background-color: var(--fuchsia-blue);
+  border-radius: 102.87px;
+  height: 206px;
+  left: 38px;
+  position: absolute;
+  top: 228px;
+  width: 206px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .rectangle-124-2vBsE1 {
+  background-color: var(--fuchsia-blue);
+  height: 525px;
+  left: 13px;
+  position: absolute;
+  top: 187px;
+  width: 725px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .rectangle-123-YplmAR {
+  background-color: var(--ioslightprimary);
+  border: 2px solid;
+  border-color: var(--ioslightprimary);
+  height: 11px;
+  left: -113px;
+  position: absolute;
+  top: 164px;
+  width: 23px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .group-1707483713-YplmAR {
+  background-color: transparent;
+  height: 408px;
+  left: -12px;
+  position: absolute;
+  top: 456px;
+  width: 462px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .group-18-fC7kas {
+  background-color: transparent;
+  height: 282px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 462px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-129-xJE7rW {
+  background-color: var(--medium-purple);
+  border-radius: 65.5px;
+  height: 131px;
+  left: 331px;
+  position: absolute;
+  top: 0px;
+  width: 131px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-130-xJE7rW {
+  background-color: var(--medium-purple);
+  border-radius: 54px;
+  height: 108px;
+  left: 269px;
+  position: absolute;
+  top: 71px;
+  width: 108px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-134-xJE7rW {
+  background-color: var(--medium-purple);
+  border-radius: 79px;
+  height: 158px;
+  left: 275px;
+  position: absolute;
+  top: 97px;
+  width: 158px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-131-xJE7rW {
+  background-color: var(--medium-purple);
+  border-radius: 79.5px;
+  height: 159px;
+  left: 146px;
+  position: absolute;
+  top: 123px;
+  width: 159px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-132-xJE7rW {
+  background-color: var(--medium-purple);
+  border-radius: 43px;
+  height: 86px;
+  left: 114px;
+  position: absolute;
+  top: 134px;
+  width: 86px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .ellipse-133-xJE7rW {
+  background-color: var(--medium-purple);
+  border-radius: 72px;
+  height: 144px;
+  left: 0px;
+  position: absolute;
+  top: 85px;
+  width: 144px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .rectangle-128-fC7kas {
+  background-color: var(--medium-purple);
+  height: 229px;
+  left: 12px;
+  position: absolute;
+  top: 179px;
+  width: 376px;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .text_label-YplmAR {
+  background-color: transparent;
+  height: auto;
+  left: 109px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 37px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .x-YplmAR {
+  background-color: transparent;
+  height: auto;
+  left: 70px;
+  letter-spacing: 0.00px;
+  line-height: 35.4px;
+  position: absolute;
+  text-align: left;
+  top: 69px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.u4359u4457u4352u4458u4523u4370u4449u4535-1 .arrow-left-circle-YplmAR {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  left: 24px;
+  position: absolute;
+  top: 38px;
+  width: 32px;
+}
+</style></head><body style="margin: 0;background: #693ce4;"><input type="hidden" id="anPageName" name="page" value="u4359u4457u4352u4458u4523u4370u4449u4535-1"><div class="container-center-horizontal"><div class="u4359u4457u4352u4458u4523u4370u4449u4535-1 screen " data-id="40000005:1471" onclick="window.open('u4359u4457u4352u4458u4523u4370u4449u4535u95u4361u4449u4540u4361u4454', '_self');"><div class="group-19-YplmAR" data-id="40000005:1472"><div class="ellipse-139-2vBsE1" data-id="40000005:1473"></div><img class="ellipse-141-2vBsE1" data-id="40000005:1474" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67bd87fc90c3f6515a091de4/releases/67bd881c90c3f6515a091de5/img/ellipse-141-2.svg" alt="Ellipse 141"><div class="ellipse-144-2vBsE1" data-id="40000005:1475"></div><div class="ellipse-145-2vBsE1" data-id="40000005:1476"></div><div class="ellipse-146-2vBsE1" data-id="40000005:1477"></div><div class="ellipse-142-2vBsE1" data-id="40000005:1478"></div><div class="ellipse-143-2vBsE1" data-id="40000005:1479"></div><div class="rectangle-124-2vBsE1" data-id="40000005:1480"></div></div><div class="rectangle-123-YplmAR" data-id="40000005:1481"></div><div class="group-1707483713-YplmAR" data-id="40000005:1482"><div class="group-18-fC7kas" data-id="40000005:1483"><div class="ellipse-129-xJE7rW" data-id="40000005:1484"></div><div class="ellipse-130-xJE7rW" data-id="40000005:1485"></div><div class="ellipse-134-xJE7rW" data-id="40000005:1486"></div><div class="ellipse-131-xJE7rW" data-id="40000005:1487"></div><div class="ellipse-132-xJE7rW" data-id="40000005:1488"></div><div class="ellipse-133-xJE7rW" data-id="40000005:1489"></div></div><div class="rectangle-128-fC7kas" data-id="40000005:1490"></div></div>
+
+<!-- 제일 큰 별 -->
+<a href="u4359u4457u4352u4458u4523u4370u4449u4535u95u4361u4449u4540u4361u4454" onclick="window.event.stopPropagation()">
+  <img class="star star-large" src="https://raw.githubusercontent.com/kannapeace/tori/refs/heads/main/images/star.svg" alt="Star Large" style="left: 40px; top: 150px;">
+</a>
+
+<!-- 두번째 별 (중간 크기) -->
+<a href="u4359u4457u4352u4458u4523u4370u4449u4535u95u4361u4449u4540u4361u4454" onclick="window.event.stopPropagation()">
+  <img class="star star-medium" src="https://raw.githubusercontent.com/kannapeace/tori/refs/heads/main/images/star.svg" alt="Star Medium" style="left: 220px; top: 280px;">
+</a>
+
+<!-- 세번째 별 (작은 크기) -->
+<a href="u4359u4457u4352u4458u4523u4370u4449u4535u95u4361u4449u4540u4361u4454" onclick="window.event.stopPropagation()">
+  <img class="star star-small" src="https://raw.githubusercontent.com/kannapeace/tori/refs/heads/main/images/star.svg" alt="Star Small" style="left: 60px; top: 350px;">
+</a>
+
+<!-- 네번째 별 (가장 작은 크기) -->
+<a href="u4359u4457u4352u4458u4523u4370u4449u4535u95u4361u4449u4540u4361u4454" onclick="window.event.stopPropagation()">
+  <img class="star star-xsmall" src="https://raw.githubusercontent.com/kannapeace/tori/refs/heads/main/images/star.svg" alt="Star Extra Small" style="left: 280px; top: 400px;">
+</a>
+
+<h1 class="text_label-YplmAR pretendard-bold-white-24px" data-id="40000005:1523">우리가 만든 우주</h1><p class="x-YplmAR pretendard-medium-white-16px" data-id="40000005:1524">별들을 누르면 이전 대화를 볼 수 있어!</p><a href="u4358u4454u4363u4469u4523" onclick="window.event.stopPropagation()"><img class="arrow-left-circle-YplmAR" data-id="40000005:1525" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67bd87fc90c3f6515a091de4/releases/67bd88cf9f704baad85db677/img/arrow-left-circle-7.svg" alt="Arrow lef
