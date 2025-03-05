@@ -17,6 +17,16 @@
     </style>
 </head>
 <body>
-<img src="images/onboarding_1.gif">
+    <div id="lottie"></div>
+    
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie'), // 애니메이션이 표시될 div 요소
+            renderer: 'svg', // SVG 렌더러 사용
+            loop: false, // 반복 여부
+            autoplay: true, // 자동 재생 여부
+            path: 'https://kannapeace.github.io/tori/images/ok_what2.json' // JSON 파일 경로
+        });
+    </script>
 </body>
 </html>
