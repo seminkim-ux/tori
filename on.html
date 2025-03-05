@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottie Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.10/lottie.min.js"></script>
+      body {
+            margin: 0;
+            height: 100vh;
+            background-color: #693CE4; /* 배경색 설정 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+</head>
+<body>
+    <div id="lottie"></div>
+    
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie'), // 애니메이션이 표시될 div 요소
+            renderer: 'svg', // SVG 렌더러 사용
+            loop: false, // 반복 여부
+            autoplay: true, // 자동 재생 여부
+            path: 'path_to_your_animation.json' // JSON 파일 경로
+        });
+    </script>
+</body>
+</html>
